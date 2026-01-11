@@ -7,7 +7,7 @@ const UserData = () => {
   const { user } = useSelector(selectAuth);
 
     return (
-        <div>
+        <div className='my-65 mx-60'>
      <div className="p-6">
        <h1 className="text-3xl font-bold">User Dashboard</h1>
        <p className="py-2">Welcome, {user?.email ?? 'user'}.</p>
