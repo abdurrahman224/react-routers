@@ -10,7 +10,7 @@ const ItemList = () => {
 
   useEffect(() => {
     if (!passedItems) {
-      fetch("/src/JSON/Dummy.json")
+      fetch("/JSON/Dummy.json")
         .then((r) => r.json())
         .then((json) => {
           const all = json.flatMap((c) => c.items ?? []);

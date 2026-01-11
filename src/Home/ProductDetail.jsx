@@ -11,7 +11,7 @@ const ProductDetail = () => {
   useEffect(() => {
     if (!passed) {
       // try to fetch by id if provided via query or state; fallback to first item
-      fetch("/src/JSON/Dummy.json")
+      fetch("/JSON/Dummy.json")
         .then((r) => r.json())
         .then((json) => {
           const all = json.flatMap((c) => c.items ?? []);

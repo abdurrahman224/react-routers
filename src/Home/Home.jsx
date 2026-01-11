@@ -15,7 +15,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("/src/JSON/Dummy.json")
+    fetch("/JSON/Dummy.json")
       .then((res) => res.json())
       .then((jsonData) => {
         setData(jsonData);

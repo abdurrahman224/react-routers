@@ -7,7 +7,7 @@ const Hero = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/src/JSON/Dummy.json")
+    fetch("/JSON/Dummy.json")
       .then((response) => response.json())
       .then((jsonData) => {
         setData(jsonData);
