@@ -24,7 +24,7 @@ const ProductDetail = () => {
   if (!item) {
     return (
       <div className="px-6 pt-24">
-        <div className="text-center py-20">No product selected.</div>
+
         <div className="text-center mt-4">
           <Link to="/" className="btn btn-primary">
             Back to Home
@@ -37,9 +37,7 @@ const ProductDetail = () => {
   const addQty = () => setQty((q) => Math.max(1, q + 1));
   const subQty = () => setQty((q) => Math.max(1, q - 1));
 
-  const buyNow = () => {
-    navigate("/cart", { state: { item: { ...item, qty } } });
-  };
+
 
   return (
     <div className="px-6 pt-24">
@@ -67,32 +65,20 @@ const ProductDetail = () => {
 
           <p className="text-xl text-green-600 font-bold mb-4">৳ {item.price}</p>
 
-          <div className="mb-6">
-            <h3 className="font-semibold mb-2">Key Features</h3>
-            <ul className="list-disc list-inside text-gray-700">
-              <li>Feature 1: {item.feature1 ?? "N/A"}</li>
-              <li>Feature 2: {item.feature2 ?? "N/A"}</li>
-              <li>Feature 3: {item.feature3 ?? "N/A"}</li>
-            </ul>
-          </div>
+     
 
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex flex-col  items-start gap-4 mb-6">
             <div className="flex items-center border rounded">
               <button onClick={subQty} className="px-3">-</button>
               <div className="px-4">{qty}</div>
               <button onClick={addQty} className="px-3">+</button>
             </div>
 
-            <button onClick={buyNow} className="btn btn-primary">
+            <button  className="btn btn-primary">
               Buy Now
             </button>
 
-            <button
-              onClick={() => alert("Added to cart (demo)")}
-              className="btn btn-ghost"
-            >
-              Add to Cart
-            </button>
+           
           </div>
 
           <div>
