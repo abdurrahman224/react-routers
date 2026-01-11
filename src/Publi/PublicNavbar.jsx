@@ -20,6 +20,9 @@ const PublicNavbar = () => {
       
         <Link to="/items">Item 3</Link>
       </li>
+      <li>
+        <Link to="/cart">Cart</Link>
+      </li>
     </>
   );
 
@@ -62,7 +65,9 @@ const PublicNavbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{menuItems}</ul>
+        <ul className="menu menu-horizontal px-1">{menuItems}
+          
+        </ul>
       </div>
       <div className="navbar-end">
         <Link to="/login">

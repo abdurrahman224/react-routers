@@ -9,6 +9,10 @@ import Hero from "../Home/Hero";
 import Home from "../Home/Home";
 import Item from "../Home/Item";
 import Items from "../Home/Items";
+import Cart from "../Home/Cart";
+import ItemList from "../Home/ItemList";
+import ProductDetail from "../Home/ProductDetail";
+
 
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
@@ -33,6 +37,10 @@ const router = createBrowserRouter(
         <Route path="hero" element={<Home />} />
         <Route path="item" element={<Item />} />
         <Route path="items" element={<Items />} />
+        <Route path="items-list" element={<ItemList />} />
+        <Route path="product" element={<ProductDetail />} />
+        <Route path="cart" element={<Cart />} />
+     
       </Route>
 
       {/* Authentication Routes */}
