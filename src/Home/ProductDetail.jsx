@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, Link, useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addItem, openDrawer } from "../features/cart/cartSlice";
+import { toast } from 'react-toastify';
 
 const ProductDetail = () => {
   const { state } = useLocation();
@@ -8,6 +11,13 @@ const ProductDetail = () => {
   const [item, setItem] = useState(passed);
   const [qty, setQty] = useState(1);
   const params = useParams();
+
+  const COLOR_MAP = {
+    Electronics: { border: "", ring: "" },
+    Clothing: { border: "", ring: "" },
+    Furniture: { border: "", ring: "" },
+    Toys: { border: "", ring: "" },
+  };
 
   useEffect(() => {
     if (passed) return;
@@ -57,7 +67,7 @@ const ProductDetail = () => {
       <div className="px-6 pt-24">
 
         <div className="text-center mt-4">
-          <Link to="/" className="btn btn-primary">
+          <Link to="/" className=" ">
             Back to Home
           </Link>
         </div>
@@ -67,6 +77,23 @@ const ProductDetail = () => {
 
   const addQty = () => setQty((q) => Math.max(1, q + 1));
   const subQty = () => setQty((q) => Math.max(1, q - 1));
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addItem({ ...item, qty, category: item.category }));
+    dispatch(openDrawer());
+  };
+
+  // show toast when item added
+  const handleAddToCartWithToast = () => {
+    dispatch(addItem({ ...item, qty, category: item.category }));
+    dispatch(openDrawer());
+    try {
+      toast.success(`${item.name} added to cart`);
+    } catch (e) {
+      // ignore if toast not available
+    }
+  };
 
 
 
@@ -74,19 +101,19 @@ const ProductDetail = () => {
     <div className="px-6 pt-24">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         <div className="lg:col-span-6">
-          <div className="border rounded p-4">
+          <div className={` shadow p-4 ${COLOR_MAP[item.category]?.border || ''}`}>
             {item.image && (
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-[480px] object-contain"
+                className="w-full h-120 object-contain"
               />
             )}
           </div>
           {/* thumbnails could go here */}
         </div>
 
-        <div className="lg:col-span-6">
+        <div className={`lg:col-span-6 shadow rounded p-4 ${COLOR_MAP[item.category]?.border || ''}`}>
           <h1 className="text-2xl font-bold mb-3">{item.name}</h1>
           <div className="flex gap-2 items-center mb-4">
             <span className="px-3 py-1 rounded-full bg-gray-100">Brand: {item.brand}</span>
@@ -105,9 +132,15 @@ const ProductDetail = () => {
               <button onClick={addQty} className="px-3">+</button>
             </div>
 
-            <button  className="btn btn-primary">
-              Buy Now
-            </button>
+            <div className="flex gap-3">
+              <button  className="btn btn-primary ">
+                Buy Now
+              </button>
+
+              <button onClick={handleAddToCartWithToast} className="btn btn-outline">
+                Add to Cart
+              </button>
+            </div>
 
            
           </div>

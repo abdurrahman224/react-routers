@@ -12,6 +12,13 @@ const PRICE_RANGES = [
 
 const TOP_CATEGORIES = ["Electronics", "Clothing", "Furniture", "Toys"];
 
+const COLOR_MAP = {
+  Electronics: { hover: "", ring: "", border: "" },
+  Clothing: { hover: "hover:border-pink-300", ring: "ring-pink-500", border: "border-pink-200" },
+  Furniture: { hover: "hover:border-amber-300", ring: "ring-amber-500", border: "border-amber-200" },
+  Toys: { hover: "hover:border-green-300", ring: "ring-green-500", border: "border-green-200" },
+};
+
 const Hero = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -58,16 +65,17 @@ const Hero = () => {
                 onKeyDown={(e) =>
                   e.key === "Enter" && (setSelectedCategory(cat), navigate(`/products/${encodeURIComponent(cat)}`))
                 }
-                className="text-center cursor-pointer"
+                className=" text-center cursor-pointer"
               >
                 <div
-                  className={`w-28 h-28 mx-auto rounded-full overflow-hidden border transition 
-                    ${active ? "ring-2 ring-blue-500" : ""}`}
+                  className={`w-28 h-28 mx-auto rounded-full overflow-hidden  transition-transform transform ${
+                    COLOR_MAP[cat]?.hover || ""
+                  } ${active ? `ring-2 ${COLOR_MAP[cat]?.ring || ""} ${COLOR_MAP[cat]?.border || ""}` : ""}`}
                 >
                   <img
                     src={img}
                     alt={cat}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover shadow"
                   />
                 </div>
                 <p className="mt-3 text-sm font-medium">{cat}</p>

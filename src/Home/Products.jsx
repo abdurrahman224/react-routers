@@ -1,5 +1,8 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addItem, openDrawer } from "../features/cart/cartSlice";
+import { toast } from 'react-toastify';
 
 const Products = () => {
   const { category } = useParams();
@@ -12,6 +15,7 @@ const Products = () => {
   const [sortOpen, setSortOpen] = useState(false);
   const itemsPerPage = 8;
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const SORT_OPTIONS = [
     { key: "alpha-asc", label: "Alphabetical (A-Z)" },
@@ -27,6 +31,15 @@ const Products = () => {
       .catch((e) => console.error(e))
       .finally(() => setLoading(false));
   }, []);
+
+  const COLOR_MAP = {
+    Electronics: { hover: "", ring: "", border: "" },
+    Clothing: { hover: "", ring: "", border: "" },
+    Furniture: { hover: "", ring: "", border: "" },
+    Toys: { hover: "", ring: "", border: "border-green-500" },
+  };
+
+  const cardHoverClass = (cat) => `${COLOR_MAP[cat]?.hover || "h"}`;
 
   useEffect(() => {
     // reset page when category or data changes
@@ -160,28 +173,46 @@ const Products = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {currentItems.map((item) => (
                   <div
-                    key={`${item.category}-${item.id}`}
-                    onClick={() => navigate(`/products/${encodeURIComponent(item.category || decodedCategory)}/${item.id}`, { state: { item } })}
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={(e) => e.key === "Enter" && navigate(`/products/${encodeURIComponent(decodedCategory)}/${item.id}`, { state: { item } })}
-                    className="border rounded-lg shadow-md p-4 hover:shadow-xl transition cursor-pointer"
-                  >
+                      key={`${item.category}-${item.id}`}
+                      onClick={() => navigate(`/products/${encodeURIComponent(item.category || decodedCategory)}/${item.id}`, { state: { item } })}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => e.key === "Enter" && navigate(`/products/${encodeURIComponent(decodedCategory)}/${item.id}`, { state: { item } })}
+                      className={` rounded-lg shadow-md p-4 hover:shadow-xl transition-transform transform cursor-pointer hover:scale-105 ${cardHoverClass(item.category || decodedCategory)}`}
+                    >
                     {item.image && (
                       <img src={item.image} alt={item.name} className="w-full h-40 object-cover rounded mb-2" />
                     )}
                     <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
                     <p className="text-gray-600 mb-1">Brand: {item.brand}</p>
                     <p className="text-green-600 font-bold mb-3">৳ {item.price}</p>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        navigate("/cart", { state: { item } });
-                      }}
-                      className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition"
-                    >
-                      Buy Now
-                    </button>
+                    <div className="flex items-center justify-between gap-2">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          navigate("/cart", { state: { item } });
+                        }}
+                        className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition"
+                      >
+                        Buy Now
+                      </button>
+
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          try {
+                            dispatch(addItem({ ...item, qty: 1, category: item.category || decodedCategory }));
+                            dispatch(openDrawer());
+                            toast.success(`${item.name} added to cart`);
+                          } catch (err) {
+                            console.error(err);
+                          }
+                        }}
+                        className="border px-3 py-1 rounded hover:bg-gray-100 transition"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
