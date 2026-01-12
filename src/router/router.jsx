@@ -12,12 +12,13 @@ import Items from "../Home/Items";
 import Cart from "../Home/Cart";
 import ItemList from "../Home/ItemList";
 import ProductDetail from "../Home/ProductDetail";
+import Products from "../Home/Products";
 
 
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
 import ProtectedRoute from "./ProtectedRoute";
-import UserDashboard from "../UserLayout/UserDashboard";
+
 import UserData from "../UserLayout/UserData";
 import User from "../UserLayout/User";
 
@@ -42,6 +43,8 @@ const router = createBrowserRouter(
         <Route path="items-list" element={<ItemList />} />
         <Route path="product/:category/:id" element={<ProductDetail />} />
         <Route path="product" element={<ProductDetail />} />
+        <Route path="products/:category/:id" element={<ProductDetail />} />
+        <Route path="products/:category" element={<Products />} />
         <Route path="cart" element={<Cart />} />
      
       </Route>

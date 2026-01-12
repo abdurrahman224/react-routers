@@ -1,177 +1,172 @@
 [
   {
     "category": "Electronics",
+    "items": [
+      {"id": 1, "name": "Smartphone X1", "brand": "TechPro", "price": 25000, "image": "https://picsum.photos/200/200?random=1"},
+      {"id": 2, "name": "Laptop Z3", "brand": "CompWorld", "price": 55000, "image": "https://picsum.photos/200/200?random=2"},
+      {"id": 3, "name": "Wireless Earbuds", "brand": "SoundMax", "price": 5000, "image": "https://picsum.photos/200/200?random=3"},
+      {"id": 4, "name": "Smartwatch S2", "brand": "TimeTech", "price": 8000, "image": "https://picsum.photos/200/200?random=4"},
+      {"id": 5, "name": "Bluetooth Speaker", "brand": "BeatBox", "price": 3500, "image": "https://picsum.photos/200/200?random=5"},
+      {"id": 6, "name": "Gaming Mouse", "brand": "ClickPro", "price": 1200, "image": "https://picsum.photos/200/200?random=6"},
+      {"id": 7, "name": "Mechanical Keyboard", "brand": "KeyMaster", "price": 4500, "image": "https://picsum.photos/200/200?random=7"},
+      {"id": 8, "name": "HD Monitor 24\"", "brand": "ViewPlus", "price": 12000, "image": "https://picsum.photos/200/200?random=8"},
+      {"id": 9, "name": "External Hard Drive 1TB", "brand": "DataSafe", "price": 6000, "image": "https://picsum.photos/200/200?random=9"},
+      {"id": 10, "name": "Drone A1", "brand": "FlyHigh", "price": 35000, "image": "https://picsum.photos/200/200?random=10"},
+      {"id": 11, "name": "Smartphone X2", "brand": "TechPro", "price": 27000, "image": "https://picsum.photos/200/200?random=11"},
+      {"id": 12, "name": "Tablet M5", "brand": "CompWorld", "price": 22000, "image": "https://picsum.photos/200/200?random=12"},
+      {"id": 13, "name": "Noise Cancelling Headphones", "brand": "SoundMax", "price": 9000, "image": "https://picsum.photos/200/200?random=13"},
+      {"id": 14, "name": "Fitness Band", "brand": "TimeTech", "price": 3500, "image": "https://picsum.photos/200/200?random=14"},
+      {"id": 15, "name": "Portable Charger 10000mAh", "brand": "PowerGo", "price": 2500, "image": "https://picsum.photos/200/200?random=15"},
+      {"id": 16, "name": "Webcam HD", "brand": "ViewPlus", "price": 3200, "image": "https://picsum.photos/200/200?random=16"},
+      {"id": 17, "name": "Gaming Headset", "brand": "ClickPro", "price": 3800, "image": "https://picsum.photos/200/200?random=17"},
+      {"id": 18, "name": "SSD 512GB", "brand": "DataSafe", "price": 7000, "image": "https://picsum.photos/200/200?random=18"},
+      {"id": 19, "name": "4K Monitor 27\"", "brand": "ViewPlus", "price": 28000, "image": "https://picsum.photos/200/200?random=19"},
+      {"id": 20, "name": "Action Camera", "brand": "ShotPro", "price": 12500, "image": "https://picsum.photos/200/200?random=20"},
+      {"id": 21, "name": "Bluetooth Earbuds Pro", "brand": "TechPro", "price": 6500, "image": "https://picsum.photos/200/200?random=21"},
+      {"id": 22, "name": "Router AX3000", "brand": "NetCore", "price": 5600, "image": "https://picsum.photos/200/200?random=22"},
+      {"id": 23, "name": "Portable Speaker Mini", "brand": "BeatBox", "price": 1800, "image": "https://picsum.photos/200/200?random=23"},
+      {"id": 24, "name": "Gaming Controller", "brand": "PlayWorks", "price": 3000, "image": "https://picsum.photos/200/200?random=24"},
+      {"id": 25, "name": "Smart Home Hub", "brand": "HomeLink", "price": 4500, "image": "https://picsum.photos/200/200?random=25"},
+      {"id": 26, "name": "Projector Mini", "brand": "ViewPlus", "price": 15000, "image": "https://picsum.photos/200/200?random=26"},
+      {"id": 27, "name": "Wireless Charger", "brand": "PowerGo", "price": 1200, "image": "https://picsum.photos/200/200?random=27"},
+      {"id": 28, "name": "Smartphone X3", "brand": "TechPro", "price": 32000, "image": "https://picsum.photos/200/200?random=28"},
+      {"id": 29, "name": "Laptop Z5", "brand": "CompWorld", "price": 75000, "image": "https://picsum.photos/200/200?random=29"},
+      {"id": 30, "name": "Portable SSD 1TB", "brand": "DataSafe", "price": 14000, "image": "https://picsum.photos/200/200?random=30"}
+    ],
     "subcategories": [
-      {
-        "name": "All",
-        "items": [
-          {"id": 1, "name": "Smartphone X1", "brand": "TechPro", "price": 25000, "image": "https://picsum.photos/200/200?random=1"},
-          {"id": 2, "name": "Laptop Z3", "brand": "CompWorld", "price": 55000, "image": "https://picsum.photos/200/200?random=2"},
-          {"id": 3, "name": "Wireless Earbuds", "brand": "SoundMax", "price": 5000, "image": "https://picsum.photos/200/200?random=3"},
-          {"id": 4, "name": "Smartwatch S2", "brand": "TimeTech", "price": 8000, "image": "https://picsum.photos/200/200?random=4"},
-          {"id": 5, "name": "Bluetooth Speaker", "brand": "BeatBox", "price": 3500, "image": "https://picsum.photos/200/200?random=5"},
-          {"id": 6, "name": "Gaming Mouse", "brand": "ClickPro", "price": 1200, "image": "https://picsum.photos/200/200?random=6"},
-          {"id": 7, "name": "Mechanical Keyboard", "brand": "KeyMaster", "price": 4500, "image": "https://picsum.photos/200/200?random=7"},
-          {"id": 8, "name": "HD Monitor 24\"", "brand": "ViewPlus", "price": 12000, "image": "https://picsum.photos/200/200?random=8"},
-          {"id": 9, "name": "External Hard Drive 1TB", "brand": "DataSafe", "price": 6000, "image": "https://picsum.photos/200/200?random=9"},
-          {"id": 10, "name": "Drone A1", "brand": "FlyHigh", "price": 35000, "image": "https://picsum.photos/200/200?random=10"},
-          {"id": 11, "name": "Smartphone X2", "brand": "TechPro", "price": 27000, "image": "https://picsum.photos/200/200?random=11"},
-          {"id": 12, "name": "Tablet M5", "brand": "CompWorld", "price": 22000, "image": "https://picsum.photos/200/200?random=12"},
-          {"id": 13, "name": "Noise Cancelling Headphones", "brand": "SoundMax", "price": 9000, "image": "https://picsum.photos/200/200?random=13"},
-          {"id": 14, "name": "Fitness Band", "brand": "TimeTech", "price": 3500, "image": "https://picsum.photos/200/200?random=14"},
-          {"id": 15, "name": "Portable Charger 10000mAh", "brand": "PowerGo", "price": 2500, "image": "https://picsum.photos/200/200?random=15"},
-          {"id": 16, "name": "Webcam HD", "brand": "ViewPlus", "price": 3200, "image": "https://picsum.photos/200/200?random=16"},
-          {"id": 17, "name": "Gaming Headset", "brand": "ClickPro", "price": 3800, "image": "https://picsum.photos/200/200?random=17"},
-          {"id": 18, "name": "SSD 512GB", "brand": "DataSafe", "price": 7000, "image": "https://picsum.photos/200/200?random=18"},
-          {"id": 19, "name": "4K Monitor 27\"", "brand": "ViewPlus", "price": 28000, "image": "https://picsum.photos/200/200?random=19"},
-          {"id": 20, "name": "Action Camera", "brand": "ShotPro", "price": 12500, "image": "https://picsum.photos/200/200?random=20"},
-          {"id": 21, "name": "Bluetooth Earbuds Pro", "brand": "TechPro", "price": 6500, "image": "https://picsum.photos/200/200?random=21"},
-          {"id": 22, "name": "Router AX3000", "brand": "NetCore", "price": 5600, "image": "https://picsum.photos/200/200?random=22"},
-          {"id": 23, "name": "Portable Speaker Mini", "brand": "BeatBox", "price": 1800, "image": "https://picsum.photos/200/200?random=23"},
-          {"id": 24, "name": "Gaming Controller", "brand": "PlayWorks", "price": 3000, "image": "https://picsum.photos/200/200?random=24"},
-          {"id": 25, "name": "Smart Home Hub", "brand": "HomeLink", "price": 4500, "image": "https://picsum.photos/200/200?random=25"},
-          {"id": 26, "name": "Projector Mini", "brand": "ViewPlus", "price": 15000, "image": "https://picsum.photos/200/200?random=26"},
-          {"id": 27, "name": "Wireless Charger", "brand": "PowerGo", "price": 1200, "image": "https://picsum.photos/200/200?random=27"},
-          {"id": 28, "name": "Smartphone X3", "brand": "TechPro", "price": 32000, "image": "https://picsum.photos/200/200?random=28"},
-          {"id": 29, "name": "Laptop Z5", "brand": "CompWorld", "price": 75000, "image": "https://picsum.photos/200/200?random=29"},
-          {"id": 30, "name": "Portable SSD 1TB", "brand": "DataSafe", "price": 14000, "image": "https://picsum.photos/200/200?random=30"}
-        ]
-      }
-    ]
+    {
+      "name": "Mobiles & Tablets",
+      "items": [
+        { "id": 1, "name": "Smartphone X1", "brand": "TechPro", "price": 25000, "image": "https://picsum.photos/200/200?random=1" },
+        { "id": 11, "name": "Smartphone X2", "brand": "TechPro", "price": 27000, "image": "https://picsum.photos/200/200?random=11" },
+        { "id": 28, "name": "Smartphone X3", "brand": "TechPro", "price": 32000, "image": "https://picsum.photos/200/200?random=28" },
+        { "id": 12, "name": "Tablet M5", "brand": "CompWorld", "price": 22000, "image": "https://picsum.photos/200/200?random=12" }
+      ]
+    },
+    {
+      "name": "Computers & Accessories",
+      "items": [
+        { "id": 2, "name": "Laptop Z3", "brand": "CompWorld", "price": 55000, "image": "https://picsum.photos/200/200?random=2" },
+        { "id": 29, "name": "Laptop Z5", "brand": "CompWorld", "price": 75000, "image": "https://picsum.photos/200/200?random=29" },
+        { "id": 6, "name": "Gaming Mouse", "brand": "ClickPro", "price": 1200, "image": "https://picsum.photos/200/200?random=6" },
+        { "id": 7, "name": "Mechanical Keyboard", "brand": "KeyMaster", "price": 4500, "image": "https://picsum.photos/200/200?random=7" },
+        { "id": 16, "name": "Webcam HD", "brand": "ViewPlus", "price": 3200, "image": "https://picsum.photos/200/200?random=16" }
+      ]
+    },
+    {
+      "name": "Audio & Wearables",
+      "items": [
+        { "id": 3, "name": "Wireless Earbuds", "brand": "SoundMax", "price": 5000, "image": "https://picsum.photos/200/200?random=3" },
+        { "id": 13, "name": "Noise Cancelling Headphones", "brand": "SoundMax", "price": 9000, "image": "https://picsum.photos/200/200?random=13" },
+        { "id": 21, "name": "Bluetooth Earbuds Pro", "brand": "TechPro", "price": 6500, "image": "https://picsum.photos/200/200?random=21" },
+        { "id": 4, "name": "Smartwatch S2", "brand": "TimeTech", "price": 8000, "image": "https://picsum.photos/200/200?random=4" },
+        { "id": 14, "name": "Fitness Band", "brand": "TimeTech", "price": 3500, "image": "https://picsum.photos/200/200?random=14" }
+      ]
+    },
+    {
+      "name": "Gadgets & Storage",
+      "items": [
+        { "id": 9, "name": "External Hard Drive 1TB", "brand": "DataSafe", "price": 6000, "image": "https://picsum.photos/200/200?random=9" },
+        { "id": 18, "name": "SSD 512GB", "brand": "DataSafe", "price": 7000, "image": "https://picsum.photos/200/200?random=18" },
+        { "id": 30, "name": "Portable SSD 1TB", "brand": "DataSafe", "price": 14000, "image": "https://picsum.photos/200/200?random=30" },
+        { "id": 10, "name": "Drone A1", "brand": "FlyHigh", "price": 35000, "image": "https://picsum.photos/200/200?random=10" },
+        { "id": 20, "name": "Action Camera", "brand": "ShotPro", "price": 12500, "image": "https://picsum.photos/200/200?random=20" }
+      ]
+    }
+  ]
   },
   {
     "category": "Furniture",
+    "items": [
+      {"id": 1, "name": "Dining Table Set", "brand": "HomeDeco", "price": 18000, "image": "https://picsum.photos/200/200?random=11"},
+      {"id": 2, "name": "Sofa 3-Seater", "brand": "ComfyHome", "price": 25000, "image": "https://picsum.photos/200/200?random=12"},
+      {"id": 3, "name": "Office Chair", "brand": "SitWell", "price": 4000, "image": "https://picsum.photos/200/200?random=13"},
+      {"id": 4, "name": "Wardrobe 3-Door", "brand": "StoreMore", "price": 15000, "image": "https://picsum.photos/200/200?random=14"},
+      {"id": 5, "name": "Coffee Table", "brand": "TableTop", "price": 5000, "image": "https://picsum.photos/200/200?random=15"}
+    ],
     "subcategories": [
-      {
-        "name": "All",
-        "items": [
-          {"id": 1, "name": "Dining Table Set", "brand": "HomeDeco", "price": 18000, "image": "https://picsum.photos/200/200?random=31"},
-          {"id": 2, "name": "Sofa 3-Seater", "brand": "ComfyHome", "price": 25000, "image": "https://picsum.photos/200/200?random=32"},
-          {"id": 3, "name": "Office Chair", "brand": "SitWell", "price": 4000, "image": "https://picsum.photos/200/200?random=33"},
-          {"id": 4, "name": "Wardrobe 3-Door", "brand": "StoreMore", "price": 15000, "image": "https://picsum.photos/200/200?random=34"},
-          {"id": 5, "name": "Coffee Table", "brand": "TableTop", "price": 5000, "image": "https://picsum.photos/200/200?random=35"},
-          {"id": 6, "name": "Bookshelf Tall", "brand": "StoreMore", "price": 7200, "image": "https://picsum.photos/200/200?random=36"},
-          {"id": 7, "name": "TV Stand", "brand": "HomeDeco", "price": 6200, "image": "https://picsum.photos/200/200?random=37"},
-          {"id": 8, "name": "Bed Frame Queen", "brand": "SleepWell", "price": 22000, "image": "https://picsum.photos/200/200?random=38"},
-          {"id": 9, "name": "Mattress Foam", "brand": "SleepWell", "price": 9000, "image": "https://picsum.photos/200/200?random=39"},
-          {"id": 10, "name": "Nightstand", "brand": "TableTop", "price": 2400, "image": "https://picsum.photos/200/200?random=40"},
-          {"id": 11, "name": "Dressing Table", "brand": "GlamHome", "price": 8200, "image": "https://picsum.photos/200/200?random=41"},
-          {"id": 12, "name": "Bar Stool", "brand": "ComfyHome", "price": 1500, "image": "https://picsum.photos/200/200?random=42"},
-          {"id": 13, "name": "Sideboard", "brand": "HomeDeco", "price": 9800, "image": "https://picsum.photos/200/200?random=43"},
-          {"id": 14, "name": "Recliner Chair", "brand": "RelaxCo", "price": 11500, "image": "https://picsum.photos/200/200?random=44"},
-          {"id": 15, "name": "Console Table", "brand": "TableTop", "price": 4300, "image": "https://picsum.photos/200/200?random=45"},
-          {"id": 16, "name": "TV Wall Unit", "brand": "StoreMore", "price": 14000, "image": "https://picsum.photos/200/200?random=46"},
-          {"id": 17, "name": "Accent Chair", "brand": "ComfyHome", "price": 5200, "image": "https://picsum.photos/200/200?random=47"},
-          {"id": 18, "name": "Entryway Bench", "brand": "HomeDeco", "price": 3300, "image": "https://picsum.photos/200/200?random=48"},
-          {"id": 19, "name": "Patio Set 4-piece", "brand": "Outdoorly", "price": 12000, "image": "https://picsum.photos/200/200?random=49"},
-          {"id": 20, "name": "Futon Sofa", "brand": "RelaxCo", "price": 7800, "image": "https://picsum.photos/200/200?random=50"},
-          {"id": 21, "name": "Kitchen Cabinet", "brand": "StoreMore", "price": 16000, "image": "https://picsum.photos/200/200?random=51"},
-          {"id": 22, "name": "Corner Shelf", "brand": "TableTop", "price": 2100, "image": "https://picsum.photos/200/200?random=52"},
-          {"id": 23, "name": "Ottoman", "brand": "ComfyHome", "price": 1900, "image": "https://picsum.photos/200/200?random=53"},
-          {"id": 24, "name": "Vanity Stool", "brand": "GlamHome", "price": 1200, "image": "https://picsum.photos/200/200?random=54"},
-          {"id": 25, "name": "Buffet Cabinet", "brand": "HomeDeco", "price": 14200, "image": "https://picsum.photos/200/200?random=55"},
-          {"id": 26, "name": "Filing Cabinet", "brand": "OfficePro", "price": 3500, "image": "https://picsum.photos/200/200?random=56"},
-          {"id": 27, "name": "Bean Bag", "brand": "CozyCorner", "price": 1100, "image": "https://picsum.photos/200/200?random=57"},
-          {"id": 28, "name": "TV Lift Cabinet", "brand": "StoreMore", "price": 19800, "image": "https://picsum.photos/200/200?random=58"},
-          {"id": 29, "name": "Hall Mirror", "brand": "GlamHome", "price": 2600, "image": "https://picsum.photos/200/200?random=59"},
-          {"id": 30, "name": "Garden Bench", "brand": "Outdoorly", "price": 4700, "image": "https://picsum.photos/200/200?random=60"}
-        ]
-      },
       {
         "name": "Living Room",
         "items": [
-          {"id": 2, "name": "Sofa 3-Seater", "brand": "ComfyHome", "price": 25000, "image": "https://picsum.photos/200/200?random=32"},
-          {"id": 5, "name": "Coffee Table", "brand": "TableTop", "price": 5000, "image": "https://picsum.photos/200/200?random=35"},
-          {"id": 7, "name": "TV Stand", "brand": "HomeDeco", "price": 6200, "image": "https://picsum.photos/200/200?random=37"},
-          {"id": 14, "name": "Recliner Chair", "brand": "RelaxCo", "price": 11500, "image": "https://picsum.photos/200/200?random=44"},
-          {"id": 23, "name": "Ottoman", "brand": "ComfyHome", "price": 1900, "image": "https://picsum.photos/200/200?random=53"}
+          {"id": 101, "name": "Corner Sofa", "brand": "ComfyHome", "price": 32000, "image": "https://picsum.photos/200/200?random=51"},
+          {"id": 102, "name": "TV Stand", "brand": "HomeDeco", "price": 7000, "image": "https://picsum.photos/200/200?random=52"},
+          {"id": 103, "name": "Recliner Chair", "brand": "SitWell", "price": 8500, "image": "https://picsum.photos/200/200?random=53"}
         ]
       },
       {
         "name": "Bedroom",
         "items": [
-          {"id": 8, "name": "Bed Frame Queen", "brand": "SleepWell", "price": 22000, "image": "https://picsum.photos/200/200?random=38"},
-          {"id": 9, "name": "Mattress Foam", "brand": "SleepWell", "price": 9000, "image": "https://picsum.photos/200/200?random=39"},
-          {"id": 10, "name": "Nightstand", "brand": "TableTop", "price": 2400, "image": "https://picsum.photos/200/200?random=40"},
-          {"id": 11, "name": "Dressing Table", "brand": "GlamHome", "price": 8200, "image": "https://picsum.photos/200/200?random=41"}
+          {"id": 201, "name": "Queen Bed", "brand": "StoreMore", "price": 22000, "image": "https://picsum.photos/200/200?random=54"},
+          {"id": 202, "name": "Bedside Table", "brand": "TableTop", "price": 2200, "image": "https://picsum.photos/200/200?random=55"},
+          {"id": 203, "name": "Dresser Mirror", "brand": "HomeDeco", "price": 4800, "image": "https://picsum.photos/200/200?random=56"}
         ]
       },
       {
         "name": "Office",
         "items": [
-          {"id": 3, "name": "Office Chair", "brand": "SitWell", "price": 4000, "image": "https://picsum.photos/200/200?random=33"},
-          {"id": 26, "name": "Filing Cabinet", "brand": "OfficePro", "price": 3500, "image": "https://picsum.photos/200/200?random=56"},
-          {"id": 6, "name": "Bookshelf Tall", "brand": "StoreMore", "price": 7200, "image": "https://picsum.photos/200/200?random=36"}
+          {"id": 301, "name": "Executive Desk", "brand": "OfficePro", "price": 12000, "image": "https://picsum.photos/200/200?random=57"},
+          {"id": 302, "name": "Ergonomic Chair", "brand": "SitWell", "price": 6500, "image": "https://picsum.photos/200/200?random=58"}
+        ]
+      },
+      {
+        "name": "Outdoor",
+        "items": [
+          {"id": 401, "name": "Patio Set", "brand": "GardenLux", "price": 14000, "image": "https://picsum.photos/200/200?random=59"},
+          {"id": 402, "name": "Hammock", "brand": "RelaxCo", "price": 3200, "image": "https://picsum.photos/200/200?random=60"}
         ]
       }
     ]
   },
   {
     "category": "Clothing",
-    "subcategories": [
-      {
-        "name": "All",
-        "items": [
-          {"id": 1, "name": "Men's T-Shirt", "brand": "FashionHub", "price": 800, "image": "https://picsum.photos/200/200?random=61"},
-          {"id": 2, "name": "Women's Dress", "brand": "StylePoint", "price": 1200, "image": "https://picsum.photos/200/200?random=62"},
-          {"id": 3, "name": "Jeans", "brand": "DenimCo", "price": 1500, "image": "https://picsum.photos/200/200?random=63"},
-          {"id": 4, "name": "Jacket", "brand": "WinterWear", "price": 2500, "image": "https://picsum.photos/200/200?random=64"},
-          {"id": 5, "name": "Sweater", "brand": "CozyCloth", "price": 1800, "image": "https://picsum.photos/200/200?random=65"},
-          {"id": 6, "name": "Casual Shirt", "brand": "TrendLine", "price": 1100, "image": "https://picsum.photos/200/200?random=66"},
-          {"id": 7, "name": "Blouse", "brand": "StylePoint", "price": 1300, "image": "https://picsum.photos/200/200?random=67"},
-          {"id": 8, "name": "Shorts", "brand": "UrbanFit", "price": 700, "image": "https://picsum.photos/200/200?random=68"},
-          {"id": 9, "name": "Skirt", "brand": "FashionHub", "price": 900, "image": "https://picsum.photos/200/200?random=69"},
-          {"id": 10, "name": "Hoodie", "brand": "CozyCloth", "price": 1600, "image": "https://picsum.photos/200/200?random=70"},
-          {"id": 11, "name": "Sneakers", "brand": "ShoeMart", "price": 3200, "image": "https://picsum.photos/200/200?random=71"},
-          {"id": 12, "name": "Formal Shoes", "brand": "SoleComfort", "price": 4200, "image": "https://picsum.photos/200/200?random=72"},
-          {"id": 13, "name": "Sandals", "brand": "FootEase", "price": 900, "image": "https://picsum.photos/200/200?random=73"},
-          {"id": 14, "name": "Socks Pack (5)", "brand": "ComfortSox", "price": 400, "image": "https://picsum.photos/200/200?random=74"},
-          {"id": 15, "name": "Underwear Set", "brand": "UnderWearCo", "price": 700, "image": "https://picsum.photos/200/200?random=75"},
-          {"id": 16, "name": "Formal Suit", "brand": "TailorMade", "price": 8800, "image": "https://picsum.photos/200/200?random=76"},
-          {"id": 17, "name": "Tie", "brand": "Elegance", "price": 500, "image": "https://picsum.photos/200/200?random=77"},
-          {"id": 18, "name": "Leather Belt", "brand": "ClassicWear", "price": 900, "image": "https://picsum.photos/200/200?random=78"},
-          {"id": 19, "name": "Leggings", "brand": "UrbanFit", "price": 850, "image": "https://picsum.photos/200/200?random=79"},
-          {"id": 20, "name": "Tracksuit", "brand": "Sportify", "price": 2400, "image": "https://picsum.photos/200/200?random=80"},
-          {"id": 21, "name": "Swimwear", "brand": "BeachVibe", "price": 1100, "image": "https://picsum.photos/200/200?random=81"},
-          {"id": 22, "name": "Baseball Cap", "brand": "StreetStyle", "price": 450, "image": "https://picsum.photos/200/200?random=82"},
-          {"id": 23, "name": "Scarf", "brand": "Elegance", "price": 600, "image": "https://picsum.photos/200/200?random=83"},
-          {"id": 24, "name": "Gloves", "brand": "WinterWear", "price": 700, "image": "https://picsum.photos/200/200?random=84"},
-          {"id": 25, "name": "Raincoat", "brand": "OutGuard", "price": 1800, "image": "https://picsum.photos/200/200?random=85"},
-          {"id": 26, "name": "Blazer", "brand": "Elegance", "price": 5200, "image": "https://picsum.photos/200/200?random=86"},
-          {"id": 27, "name": "Winter Coat", "brand": "WinterWear", "price": 6200, "image": "https://picsum.photos/200/200?random=87"},
-          {"id": 28, "name": "Nightwear Set", "brand": "CozyCloth", "price": 950, "image": "https://picsum.photos/200/200?random=88"},
-          {"id": 29, "name": "Joggers", "brand": "StreetStyle", "price": 1100, "image": "https://picsum.photos/200/200?random=89"},
-          {"id": 30, "name": "Workout Top", "brand": "Sportify", "price": 700, "image": "https://picsum.photos/200/200?random=90"}
-        ]
-      },
-      {
-        "name": "Men",
-        "items": [
-          {"id": 1, "name": "Men's T-Shirt", "brand": "FashionHub", "price": 800, "image": "https://picsum.photos/200/200?random=61"},
-          {"id": 3, "name": "Jeans", "brand": "DenimCo", "price": 1500, "image": "https://picsum.photos/200/200?random=63"},
-          {"id": 16, "name": "Formal Suit", "brand": "TailorMade", "price": 8800, "image": "https://picsum.photos/200/200?random=76"},
-          {"id": 19, "name": "Leggings", "brand": "UrbanFit", "price": 850, "image": "https://picsum.photos/200/200?random=79"}
-        ]
-      },
-      {
-        "name": "Women",
-        "items": [
-          {"id": 2, "name": "Women's Dress", "brand": "StylePoint", "price": 1200, "image": "https://picsum.photos/200/200?random=62"},
-          {"id": 7, "name": "Blouse", "brand": "StylePoint", "price": 1300, "image": "https://picsum.photos/200/200?random=67"},
-          {"id": 9, "name": "Skirt", "brand": "FashionHub", "price": 900, "image": "https://picsum.photos/200/200?random=69"},
-          {"id": 13, "name": "Sandals", "brand": "FootEase", "price": 900, "image": "https://picsum.photos/200/200?random=73"}
-        ]
-      },
-      {
-        "name": "Accessories",
-        "items": [
-          {"id": 11, "name": "Sneakers", "brand": "ShoeMart", "price": 3200, "image": "https://picsum.photos/200/200?random=71"},
-          {"id": 22, "name": "Baseball Cap", "brand": "StreetStyle", "price": 450, "image": "https://picsum.photos/200/200?random=82"},
-          {"id": 23, "name": "Scarf", "brand": "Elegance", "price": 600, "image": "https://picsum.photos/200/200?random=83"},
-          {"id": 18, "name": "Leather Belt", "brand": "ClassicWear", "price": 900, "image": "https://picsum.photos/200/200?random=78"}
-        ]
-      }
-    ]
+    "items": [
+      {"id": 1, "name": "Men's T-Shirt", "brand": "FashionHub", "price": 800, "image": "https://picsum.photos/200/200?random=16"},
+      {"id": 2, "name": "Women's Dress", "brand": "StylePoint", "price": 1200, "image": "https://picsum.photos/200/200?random=17"},
+      {"id": 3, "name": "Jeans", "brand": "DenimCo", "price": 1500, "image": "https://picsum.photos/200/200?random=18"},
+      {"id": 4, "name": "Jacket", "brand": "WinterWear", "price": 2500, "image": "https://picsum.photos/200/200?random=19"},
+      {"id": 5, "name": "Sweater", "brand": "CozyCloth", "price": 1800, "image": "https://picsum.photos/200/200?random=20"},
+      {"id": 6, "name": "Formal Shirt", "brand": "FashionHub", "price": 1600, "image": "https://picsum.photos/200/200?random=61"},
+      {"id": 7, "name": "Chinos", "brand": "DenimCo", "price": 2200, "image": "https://picsum.photos/200/200?random=62"},
+      {"id": 8, "name": "Summer Dress", "brand": "StylePoint", "price": 1300, "image": "https://picsum.photos/200/200?random=63"},
+      {"id": 9, "name": "Hoodie", "brand": "CozyCloth", "price": 2000, "image": "https://picsum.photos/200/200?random=64"},
+      {"id": 10, "name": "Shorts", "brand": "FashionHub", "price": 700, "image": "https://picsum.photos/200/200?random=65"},
+      {"id": 11, "name": "Skirt", "brand": "StylePoint", "price": 1100, "image": "https://picsum.photos/200/200?random=66"},
+      {"id": 12, "name": "Blazer", "brand": "FormalWear", "price": 4500, "image": "https://picsum.photos/200/200?random=67"}
+    ],
+     "subcategories": [
+    {
+      "name": "Men's Wear",
+      "items": [
+        { "id": 1, "name": "Men's T-Shirt", "brand": "FashionHub", "price": 800, "image": "https://picsum.photos/200/200?random=16" },
+        { "id": 6, "name": "Formal Shirt", "brand": "FashionHub", "price": 1600, "image": "https://picsum.photos/200/200?random=61" },
+        { "id": 7, "name": "Chinos", "brand": "DenimCo", "price": 2200, "image": "https://picsum.photos/200/200?random=62" }
+      ]
+    },
+    {
+      "name": "Women's Wear",
+      "items": [
+        { "id": 2, "name": "Women's Dress", "brand": "StylePoint", "price": 1200, "image": "https://picsum.photos/200/200?random=17" },
+        { "id": 8, "name": "Summer Dress", "brand": "StylePoint", "price": 1300, "image": "https://picsum.photos/200/200?random=63" },
+        { "id": 11, "name": "Skirt", "brand": "StylePoint", "price": 1100, "image": "https://picsum.photos/200/200?random=66" }
+      ]
+    },
+    {
+      "name": "Winter Wear",
+      "items": [
+        { "id": 4, "name": "Jacket", "brand": "WinterWear", "price": 2500, "image": "https://picsum.photos/200/200?random=19" },
+        { "id": 5, "name": "Sweater", "brand": "CozyCloth", "price": 1800, "image": "https://picsum.photos/200/200?random=20" },
+        { "id": 9, "name": "Hoodie", "brand": "CozyCloth", "price": 2000, "image": "https://picsum.photos/200/200?random=64" }
+      ]
+    },
+    {
+      "name": "Casual & Formal",
+      "items": [
+        { "id": 3, "name": "Jeans", "brand": "DenimCo", "price": 1500, "image": "https://picsum.photos/200/200?random=18" },
+        { "id": 10, "name": "Shorts", "brand": "FashionHub", "price": 700, "image": "https://picsum.photos/200/200?random=65" },
+        { "id": 12, "name": "Blazer", "brand": "FormalWear", "price": 4500, "image": "https://picsum.photos/200/200?random=67" }
+      ]
+    }
+  ]
   },
   {
     "category": "Toys",
@@ -196,16 +191,7 @@
       {"id": 18, "name": "Musical Toy", "brand": "SoundPlay", "price": 900, "image": "https://picsum.photos/200/200?random=38"},
       {"id": 19, "name": "Play-Doh Set", "brand": "ClayFun", "price": 600, "image": "https://picsum.photos/200/200?random=39"},
       {"id": 20, "name": "Toy Gun", "brand": "ActionToys", "price": 700, "image": "https://picsum.photos/200/200?random=40"},
-      {"id": 21, "name": "RC Boat", "brand": "Speedster", "price": 2500, "image": "https://picsum.photos/200/200?random=41"},
-      {"id": 22, "name": "Drone Toy Mini", "brand": "ToyWorld", "price": 3200, "image": "https://picsum.photos/200/200?random=42"},
-      {"id": 23, "name": "Educational Kit", "brand": "EduPlay", "price": 2100, "image": "https://picsum.photos/200/200?random=43"},
-      {"id": 24, "name": "Remote Helicopter", "brand": "Speedster", "price": 2800, "image": "https://picsum.photos/200/200?random=44"},
-      {"id": 25, "name": "Puzzle 1000pcs", "brand": "BrainPlay", "price": 1100, "image": "https://picsum.photos/200/200?random=45"},
-      {"id": 26, "name": "Science Kit", "brand": "LearnFun", "price": 1600, "image": "https://picsum.photos/200/200?random=46"},
-      {"id": 27, "name": "Balance Bike", "brand": "RollPro", "price": 4200, "image": "https://picsum.photos/200/200?random=47"},
-      {"id": 28, "name": "RC Truck", "brand": "Speedster", "price": 3300, "image": "https://picsum.photos/200/200?random=48"},
-      {"id": 29, "name": "Glow Stars Set", "brand": "FunMagic", "price": 400, "image": "https://picsum.photos/200/200?random=49"},
-      {"id": 30, "name": "Play Tent", "brand": "ToyWorld", "price": 1900, "image": "https://picsum.photos/200/200?random=50"}
+      {"id": 21, "name": "RC Boat", "brand": "Speedster", "price": 2500, "image": "https://picsum.photos/200/200?random=41"}
     ]
   }
 ]
