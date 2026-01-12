@@ -34,10 +34,13 @@ const router = createBrowserRouter(
       {/* Public Routes */}
       <Route element={<PublicLayout />}>
         <Route index element={<Hero />} />
-        <Route path="hero" element={<Home />} />
+        {/* <Route path="hero" element={<Home />} /> */}
+        <Route path="category/:categoryName" element={<Home />} />
+        <Route path="brand/:brandName" element={<Home />} />
         <Route path="item" element={<Item />} />
         <Route path="items" element={<Items />} />
         <Route path="items-list" element={<ItemList />} />
+        <Route path="product/:category/:id" element={<ProductDetail />} />
         <Route path="product" element={<ProductDetail />} />
         <Route path="cart" element={<Cart />} />
      

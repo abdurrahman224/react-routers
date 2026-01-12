@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, Link, useNavigate } from "react-router-dom";
+import { useLocation, Link, useNavigate, useParams } from "react-router-dom";
 
 const ProductDetail = () => {
   const { state } = useLocation();
@@ -7,19 +7,50 @@ const ProductDetail = () => {
   const passed = state?.item ?? null;
   const [item, setItem] = useState(passed);
   const [qty, setQty] = useState(1);
+  const params = useParams();
 
   useEffect(() => {
-    if (!passed) {
-      // try to fetch by id if provided via query or state; fallback to first item
-      fetch("/JSON/Dummy.json")
-        .then((r) => r.json())
-        .then((json) => {
-          const all = json.flatMap((c) => c.items ?? []);
-          setItem(all[0] ?? null);
-        })
-        .catch((e) => console.error(e));
-    }
-  }, [passed]);
+    if (passed) return;
+    // if params available, try to fetch the specific category and id
+    const catParam = params?.category ? decodeURIComponent(params.category) : null;
+    const idParam = params?.id ? Number(params.id) : null;
+    fetch("/JSON/Dummy.json")
+      .then((r) => r.json())
+      .then((json) => {
+        if (catParam && idParam != null) {
+          const cat = json.find((c) => c.category === catParam);
+          if (cat) {
+            // try direct items
+            let found = null;
+            if (Array.isArray(cat.items)) {
+              found = cat.items.find((it) => Number(it.id) === idParam) ?? null;
+            }
+            // try subcategories
+            if (!found && Array.isArray(cat.subcategories)) {
+              for (const s of cat.subcategories) {
+                const f = (s.items ?? []).find((it) => Number(it.id) === idParam) ?? null;
+                if (f) {
+                  found = f;
+                  break;
+                }
+              }
+            }
+            if (found) {
+              setItem({ ...found, category: catParam });
+              return;
+            }
+          }
+        }
+        // fallback to first available item across all categories/subcategories
+        const all = json.flatMap((c) => {
+          if (Array.isArray(c.items)) return c.items.map((it) => ({ ...it, category: c.category }));
+          if (Array.isArray(c.subcategories)) return c.subcategories.flatMap((s) => (s.items ?? []).map((it) => ({ ...it, category: c.category })));
+          return [];
+        });
+        setItem(all[0] ?? null);
+      })
+      .catch((e) => console.error(e));
+  }, [passed, params]);
 
   if (!item) {
     return (

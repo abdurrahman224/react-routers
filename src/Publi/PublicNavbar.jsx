@@ -1,28 +1,55 @@
-import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, Navigate, useLocation } from "react-router-dom";
 
 const PublicNavbar = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch("/JSON/Dummy.json")
+      .then((r) => r.json())
+      .then((json) => {
+        const cats = json.map((c) => c.category).filter(Boolean);
+        setCategories(cats);
+      })
+      .catch(() => setCategories([]));
+  }, []);
+
+  const location = useLocation();
+  const path = location.pathname;
+  const isActive = (to) => path === to || path.startsWith(to + "/");
+  const routeNames = {
+    "/": "Home",
+    "/hero": "Hero",
+    "/item": "Item",
+    "/items": "Items",
+    "/cart": "Cart",
+    "/login": "Login",
+  };
+  const prettify = (p) =>
+    p
+      .split("/")
+      .filter(Boolean)
+      .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+      .join(" /") || "Home";
+  const title = routeNames[path] || prettify(path);
+
   const menuItems = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/" className={isActive("/") ? "text-blue-600 font-semibold" : ""}>
+          Home
+        </Link>
       </li>
-
-      <li>
-     
-        <Link to="/hero">Item 1</Link>
-      </li>
-
-      <li>
-        <Link to="/item">Item 2</Link>
-      </li>
-      <li>
-      
-        <Link to="/items">Item 3</Link>
-      </li>
-      <li>
-        <Link to="/cart">Cart</Link>
-      </li>
+      {categories.map((cat) => {
+        const to = `/category/${encodeURIComponent(cat)}`;
+        return (
+          <li key={cat}>
+            <Link to={to} className={isActive(to) ? "text-blue-600 font-semibold" : ""}>
+              {cat}
+            </Link>
+          </li>
+        );
+      })}
     </>
   );
 
@@ -63,6 +90,7 @@ const PublicNavbar = () => {
         <Link to="/">
           <a className="btn btn-ghost text-xl">React App</a>
         </Link>
+        {/* <span className="ml-3 text-lg font-medium hidden sm:inline">{title}</span> */}
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{menuItems}
