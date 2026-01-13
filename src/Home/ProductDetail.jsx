@@ -15,6 +15,7 @@ const ProductDetail = () => {
   const [item, setItem] = useState(passed);
   const [loading, setLoading] = useState(!passed);
   const [qty, setQty] = useState(1);
+  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   useEffect(() => {
     if (passed) return;
@@ -23,7 +24,7 @@ const ProductDetail = () => {
     const idParam = params?.id ? Number(params.id) : null;
     
     setLoading(true);
-    fetch("/JSON/Dummy.json")
+    fetch(`${API_BASE}/api/categories`)
       .then((r) => r.json())
       .then((json) => {
         if (catParam && idParam != null) {
