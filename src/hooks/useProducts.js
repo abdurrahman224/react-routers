@@ -7,6 +7,9 @@ const SORT_OPTIONS = [
   { key: "price-desc", label: "Price: High to Low" },
 ];
 
+// API Base URL - change this for production
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+
 const useProducts = (category = "") => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,18 +19,21 @@ const useProducts = (category = "") => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
 
-  // Fetch data
+  // Fetch data from MongoDB API
   useEffect(() => {
     setLoading(true);
-    fetch(`${import.meta.env.BASE_URL || "/"}JSON/Dummy.json`)
-      .then((r) => r.json())
+    fetch(`${API_BASE_URL}/categories`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
       .then((json) => {
         setData(json || []);
         setError(null);
       })
       .catch((e) => {
-        console.error("Failed to fetch products:", e);
-        setError("Failed to load products");
+        console.error("Failed to fetch products from API:", e);
+        setError("Failed to load products. Make sure the backend server is running.");
       })
       .finally(() => setLoading(false));
   }, []);
