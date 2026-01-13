@@ -8,8 +8,10 @@ const Hero = () => {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL || "/"}JSON/Dummy.json`)
+    fetch(`${API_BASE}/api/categories`)
       .then((res) => res.json())
       .then((json) => setData(json || []))
       .catch((err) => console.error("Error fetching data:", err))

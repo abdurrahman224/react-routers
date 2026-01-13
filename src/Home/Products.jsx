@@ -21,10 +21,11 @@ const Products = () => {
   const [sortOpen, setSortOpen] = useState(false);
   
   const itemsPerPage = 8;
+  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   // Fetch data
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL || "/"}JSON/Dummy.json`)
+    fetch(`${API_BASE}/api/categories`)
       .then((r) => r.json())
       .then((json) => setData(json || []))
       .catch((e) => console.error(e))

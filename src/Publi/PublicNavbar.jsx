@@ -13,13 +13,13 @@ const PublicNavbar = () => {
   
   const path = location.pathname;
   const cartCount = (cart.items || []).reduce((s, it) => s + (it.qty || 0), 0);
+  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   useEffect(() => {
-    fetch("/JSON/Dummy.json")
+    fetch(`${API_BASE}/api/categories/names`)
       .then((r) => r.json())
-      .then((json) => {
-        const cats = json.map((c) => c.category).filter(Boolean);
-        setCategories(cats);
+      .then((cats) => {
+        setCategories(cats || []);
       })
       .catch(() => setCategories([]));
   }, []);
