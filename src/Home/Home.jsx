@@ -19,9 +19,10 @@ const Home = () => {
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8; // 8 items per page
+  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   useEffect(() => {
-    fetch("/JSON/Dummy.json")
+    fetch(`${API_BASE}/api/categories`)
       .then((res) => res.json())
       .then((jsonData) => {
         setData(jsonData);
